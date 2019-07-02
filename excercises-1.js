@@ -80,15 +80,19 @@ function greaterThan(a,b) {
  }
 }
 
-console.assert(greaterThan(2, 1) === true)
-console.assert(greaterThan(23, 23) === false)
-console.assert(greaterThan(-234, 1) === false)
+// console.assert(greaterThan(2, 1) === true)
+// console.assert(greaterThan(23, 23) === false)
+// console.assert(greaterThan(-234, 1) === false)
 
 // Q5
 // Write a function called `greet` that takes a
 // single parameter and returns a string that
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
+
+function greet(name) {
+    return `Hello, ${name}!`;
+}
 
 // console.assert(greet("Michael") === "Hello, Michael!")
 // console.assert(greet("R2D2") === "Hello, R2D2!")
@@ -104,6 +108,13 @@ console.assert(greaterThan(-234, 1) === false)
 // strings. For example:
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
+
+function madlib(a, b, c, d) {
+    
+    let newStr = `The ${a} brown ${b} ${c} over the ${d}.`;
+
+    return newStr;
+}
 
 // console.assert(madlib("quick","fox","jumps","fence")=== "The quick brown fox jumps over the fence.")
 // console.assert(madlib("fat","rabbit","hops","wall")=== "The fat brown rabbit hops over the wall.")
