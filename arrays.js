@@ -98,7 +98,6 @@ console.log(findIs())
 
     function joinArrays(a,b) {
        
-
         var newArr=a.concat(b); 
 
         return newArr
@@ -110,3 +109,24 @@ console.log(findIs())
 // 6. Use the Instructors array and find all that teach JavaScript, 
 //    then sort them alphabetically
 // ---------------------------
+
+    function findInstructor() {
+       var findInstructors = instructors.filter(teachjs => {
+         return teachjs.teaches == "JavaScript";
+       });
+       
+       findInstructors.sort(function (a, b) {
+        var x = a.firstname.toLowerCase()
+        var y = b.firstname.toLowerCase()
+
+        if (x < y){return -1}
+        if (x > y){return 1}
+        
+        return 0})
+
+       return findInstructors
+    }
+ 
+  
+
+  console.log(findInstructor())
